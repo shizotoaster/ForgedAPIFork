@@ -1,0 +1,39 @@
+modLoader = "javafml"
+loaderVersion = "[36,)"
+license = "Apache-2.0"
+
+[[mods]]
+modId = "forgedapi"
+version = "${version}"
+displayName = "ForgedAPI (Fork)"
+displayURL="https://github.com/shizotoaster/ForgedAPIFork" #optional
+logoFile= "icon.png" #optional
+credits='''
+
+    * FabricMC - Fabric API
+    * comp500 - Indium
+''' #optional
+authors='''
+
+    * PortingLab - API base
+    * shizotoaster - this fork
+''' #optional
+description = '''
+Fabric API unofficial Forge port (fork).
+
+Contains the essentials for Fabric API modules.
+'''
+
+[[dependencies.forgedapi]]
+modId = "forge"
+mandatory = true
+versionRange = "[36,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.forgedapi]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.16.5]"
+ordering = "NONE"
+side = "BOTH"

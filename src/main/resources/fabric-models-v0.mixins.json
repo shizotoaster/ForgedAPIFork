@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "net.fabricmc.fabric.mixin.client.model",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "MixinBakedModelManager",
+    "MixinModelLoader"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

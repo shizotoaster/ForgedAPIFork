@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "org.portinglab.fabricapi.mixin",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ChunkHolderImpl",
+    "ServerLightingProviderImpl",
+    "BlockModelRendererImpl"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

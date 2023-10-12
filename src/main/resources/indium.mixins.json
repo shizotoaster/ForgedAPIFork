@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"package": "link.infra.indium.mixin",
+	"minVersion": "0.8",
+	"compatibilityLevel": "JAVA_8",
+	"client": [
+		"renderer.MixinAmbientOcclusionCalculator",
+		"renderer.MixinBlockModelRenderer",
+		"renderer.MixinItemRenderer",
+		"sodium.MixinChunkRenderRebuildTask",
+		"sodium.MixinClonedChunkSection"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

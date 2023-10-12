@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "net.fabricmc.fabric.mixin.event.lifecycle",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MinecraftServerMixin",
+    "ServerWorldMixin",
+    "ThreadedAnvilChunkStorageMixin",
+    "WorldMixin"
+  ],
+  "client": [
+    "client.ClientChunkManagerMixin",
+    "client.ClientPlayNetworkHandlerMixin",
+    "client.ClientWorldMixin",
+    "client.MinecraftClientMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
