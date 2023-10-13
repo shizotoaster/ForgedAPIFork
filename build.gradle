@@ -13,6 +13,7 @@ loom {
     accessWidenerPath = file("src/main/resources/forgedapi.accesswidener")
     forge {
         mixinConfigs = [
+                "fabric-blockrenderlayer-v1.mixins.json",
                 "fabric-lifecycle-events-v1.mixins.json",
                 "fabric-models-v0.mixins.json",
                 "fabric-renderer-api-v1.mixins.json",
