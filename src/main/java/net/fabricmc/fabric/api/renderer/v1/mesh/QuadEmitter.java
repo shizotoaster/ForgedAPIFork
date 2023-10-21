@@ -17,9 +17,9 @@
 package net.fabricmc.fabric.api.renderer.v1.mesh;
 
 import net.minecraft.client.texture.Sprite;
-import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec2f;
+import net.minecraft.util.math.Vec3f;
 
 import net.fabricmc.fabric.api.renderer.v1.material.RenderMaterial;
 import net.fabricmc.fabric.api.renderer.v1.render.RenderContext;
@@ -59,13 +59,13 @@ public interface QuadEmitter extends MutableQuadView {
 	QuadEmitter pos(int vertexIndex, float x, float y, float z);
 
 	@Override
-	default QuadEmitter pos(int vertexIndex, Vector3f vec) {
+	default QuadEmitter pos(int vertexIndex, Vec3f vec) {
 		MutableQuadView.super.pos(vertexIndex, vec);
 		return this;
 	}
 
 	@Override
-	default QuadEmitter normal(int vertexIndex, Vector3f vec) {
+	default QuadEmitter normal(int vertexIndex, Vec3f vec) {
 		MutableQuadView.super.normal(vertexIndex, vec);
 		return this;
 	}
