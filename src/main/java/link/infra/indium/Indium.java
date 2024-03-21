@@ -22,6 +22,7 @@ import net.fabricmc.fabric.api.renderer.v1.RendererAccess;
 import net.fabricmc.fabric.api.util.TriState;
 import net.fabricmc.fabric.impl.client.indigo.Indigo;
 import net.minecraftforge.fml.ModList;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -36,6 +37,7 @@ import java.nio.file.Path;
 import java.util.Locale;
 import java.util.Properties;
 
+@Mod("indium")
 public class Indium {
 	public static final boolean ALWAYS_TESSELATE_INDIGO;
 	public static final AoConfig AMBIENT_OCCLUSION_MODE;
@@ -117,7 +119,7 @@ public class Indium {
 	}
 	public static void onInitializeClient(FMLClientSetupEvent event) {
 		try {
-			if (ModList.get().isLoaded("rubidium")) {
+			if (ModList.get().isLoaded("rubidium") || ModList.get().isLoaded("embeddium")) {
 				RendererAccess.INSTANCE.registerRenderer(IndiumRenderer.INSTANCE);
 			} else {
 				Indigo.onInitializeClient();

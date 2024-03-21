@@ -82,13 +82,16 @@ public abstract class MixinArmorFeatureRenderer extends FeatureRenderer {
 
 	@Inject(method = "getArmor", at = @At("RETURN"), cancellable = true)
 	private void selectArmorModel(EquipmentSlot slot, CallbackInfoReturnable<BipedEntityModel<LivingEntity>> cir) {
-		ItemStack stack = storedEntity.getEquippedStack(slot);
+		if (this.storedEntity != null) {
+			ItemStack stack = storedEntity.getEquippedStack(slot);
 
-		BipedEntityModel<LivingEntity> defaultModel = cir.getReturnValue();
-		BipedEntityModel<LivingEntity> model = ArmorRenderingRegistry.getArmorModel(storedEntity, stack, slot, defaultModel);
 
-		if (model != defaultModel) {
-			cir.setReturnValue(model);
+			BipedEntityModel<LivingEntity> defaultModel = cir.getReturnValue();
+			BipedEntityModel<LivingEntity> model = ArmorRenderingRegistry.getArmorModel(storedEntity, stack, slot, defaultModel);
+
+			if (model != defaultModel) {
+				cir.setReturnValue(model);
+			}
 		}
 	}
 

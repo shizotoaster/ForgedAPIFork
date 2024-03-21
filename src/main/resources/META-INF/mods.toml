@@ -3,25 +3,56 @@ loaderVersion = "[36,)"
 license = "Apache-2.0"
 
 [[mods]]
-modId = "forgedapi"
+modId = "forgedapifork"
 version = "${version}"
 displayName = "ForgedAPI (Fork)"
 displayURL="https://github.com/shizotoaster/ForgedAPIFork" #optional
-logoFile= "icon.png" #optional
+logoFile= "forgedapi_fork_icon.png" #optional
+logoBlur=false
 credits='''
 
     * FabricMC - Fabric API
-    * comp500 - Indium
 ''' #optional
 authors='''
 
-    * PortingLab - API base
-    * shizotoaster - this fork
+    * shizotoaster
 ''' #optional
 description = '''
 Fabric API unofficial Forge port (fork).
 
 Contains the essentials for Fabric API modules.
+'''
+
+[[mods]]
+modId = "forgedapi"
+version = "0.1.3"
+displayName = "ForgedAPI"
+displayURL="https://github.com/shizotoaster/ForgedAPIFork" #optional
+logoFile= "forgedapi_icon.png" #optional
+credits='''
+
+    * FabricMC - Fabric API
+''' #optional
+authors='''
+
+    * PortingLab
+''' #optional
+description = '''
+Dummy mod providing forgedapi mod id to outdated mods
+'''
+
+[[mods]]
+modId = "indium"
+version = "1.0.0"
+displayName = "Indium"
+displayURL="https://github.com/shizotoaster/ForgedAPIFork" #optional
+logoFile= "indium_icon.png" #optional
+authors='''
+
+    * comp500
+''' #optional
+description = '''
+§mSodium§r Embeddium/Rubidium addon providing support for the Fabric Rendering API, based on Indigo
 '''
 
 [[dependencies.forgedapi]]
